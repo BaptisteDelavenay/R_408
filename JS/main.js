@@ -3,13 +3,6 @@ let button = document.getElementById("button");
 let afficheNB = document.getElementById("compteur");
 let temp = document.getElementsByClassName("shop-item disabled");
 
-// Boutons pour acheter les améliorations
-let buttonloup = document.getElementById("loup");
-let buttonalpha = document.getElementById("alpha");
-let buttonloupia = document.getElementById("loupia");
-let buttontralelouloup = document.getElementById("tralelouloup");
-let buttonloup67 = document.getElementById("loup67");
-
 // toutes les div des améliorations
 let shopLoup = document.getElementsByClassName("shop-loup");
 let shopAlpha = document.getElementsByClassName("shop-alpha");
@@ -17,17 +10,29 @@ let shopLoupia = document.getElementsByClassName("shop-loupia");
 let shopTralelouloup = document.getElementsByClassName("shop-tralelouloup");
 let shopLoup67 = document.getElementsByClassName("shop-loup67");
 
+// Boutons pour acheter les améliorations
+let buttonloup = document.getElementById("loup");
+let buttonalpha = document.getElementById("alpha");
+let buttonloupia = document.getElementById("loupia");
+let buttontralelouloup = document.getElementById("tralelouloup");
+let buttonloup67 = document.getElementById("loup67");
+
 class Clicker {
   constructor() {
     this.compteur = 0;
+    this.puissance = 1;
   }
 
   getCompteur() {
     return this.compteur;
   }
 
-  incrementer(val) {
-    this.compteur += val;
+  setPuissance(val) {
+    return (this.puissance = val);
+  }
+
+  incrementer() {
+    this.compteur += this.puissance;
     return this.compteur;
   }
 
@@ -44,8 +49,10 @@ class Clicker {
 let clicker = new Clicker();
 
 buttonloup.addEventListener("click", function () {
-  clicker.payer(10);
-  afficheNB.innerHTML = clicker.getCompteur();
+  if (clicker.payer(10)) {
+    clicker.setPuissance(2);
+    afficheNB.innerHTML = clicker.getCompteur();
+  }
 });
 buttonalpha.addEventListener("click", function () {
   clicker.payer(200);
