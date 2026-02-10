@@ -25,6 +25,7 @@ let temp = document.getElementsByClassName("shop-item disabled");
 
 let loup = document.getElementById("loup");
 let loupcompteur = document.getElementById("loup-count");
+let loupnb = 0;
 let alpha = document.getElementById("alpha");
 let loupia = document.getElementById("loupia");
 let tralelouloup = document.getElementById("tralelouloup");
@@ -45,6 +46,14 @@ tralelouloup.addEventListener("click", function () {
 loup67.addEventListener("click", function () {
   Clicker.payer(6767);
 });
+
+let nbclick = 1;
+
+loup.addEventListener("click", function(){
+  nbclick +=1;
+  loupnb +=1
+  loupcompteur.innerHTML = loupnb;
+})
 
 button.addEventListener("click", function () {
   clicker.incrementer(1);
