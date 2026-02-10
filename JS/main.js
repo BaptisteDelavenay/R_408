@@ -55,20 +55,28 @@ buttonloup.addEventListener("click", function () {
   }
 });
 buttonalpha.addEventListener("click", function () {
-  clicker.payer(200);
-  afficheNB.innerHTML = clicker.getCompteur();
+  if (clicker.payer(200)) {
+    clicker.setPuissance(4);
+    afficheNB.innerHTML = clicker.getCompteur();
+  }
 });
 buttonloupia.addEventListener("click", function () {
-  clicker.payer(500);
-  afficheNB.innerHTML = clicker.getCompteur();
+  if (clicker.payer(500)) {
+    clicker.setPuissance(8);
+    afficheNB.innerHTML = clicker.getCompteur();
+  }
 });
 buttontralelouloup.addEventListener("click", function () {
-  clicker.payer(1000);
-  afficheNB.innerHTML = clicker.getCompteur();
+  if (clicker.payer(1000)) {
+    clicker.setPuissance(40);
+    afficheNB.innerHTML = clicker.getCompteur();
+  }
 });
 buttonloup67.addEventListener("click", function () {
-  clicker.payer(6767);
-  afficheNB.innerHTML = clicker.getCompteur();
+  if (clicker.payer(6767)) {
+    clicker.setPuissance(67);
+    afficheNB.innerHTML = clicker.getCompteur();
+  }
 });
 
 button.addEventListener("click", function () {
