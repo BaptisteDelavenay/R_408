@@ -4,14 +4,18 @@ let afficheNB = document.getElementById("compteur");
 let temp = document.getElementsByClassName("shop-item disabled");
 
 // Boutons pour acheter les améliorations
-let loup = document.getElementById("loup");
-let alpha = document.getElementById("alpha");
-let loupia = document.getElementById("loupia");
-let tralelouloup = document.getElementById("tralelouloup");
-let loup67 = document.getElementById("loup67");
+let buttonloup = document.getElementById("loup");
+let buttonalpha = document.getElementById("alpha");
+let buttonloupia = document.getElementById("loupia");
+let buttontralelouloup = document.getElementById("tralelouloup");
+let buttonloup67 = document.getElementById("loup67");
 
-// Nombre de loups acheté, maximum = 1
-let loupcompteur = document.getElementById("loup-count");
+// toutes les div des améliorations
+let shopLoup = document.getElementsByClassName("shop-loup");
+let shopAlpha = document.getElementsByClassName("shop-alpha");
+let shopLoupia = document.getElementsByClassName("shop-loupia");
+let shopTralelouloup = document.getElementsByClassName("shop-tralelouloup");
+let shopLoup67 = document.getElementsByClassName("shop-loup67");
 
 class Clicker {
   constructor() {
@@ -39,23 +43,23 @@ class Clicker {
 
 let clicker = new Clicker();
 
-loup.addEventListener("click", function () {
+buttonloup.addEventListener("click", function () {
   clicker.payer(10);
   afficheNB.innerHTML = clicker.getCompteur();
 });
-alpha.addEventListener("click", function () {
+buttonalpha.addEventListener("click", function () {
   clicker.payer(200);
   afficheNB.innerHTML = clicker.getCompteur();
 });
-loupia.addEventListener("click", function () {
+buttonloupia.addEventListener("click", function () {
   clicker.payer(500);
   afficheNB.innerHTML = clicker.getCompteur();
 });
-tralelouloup.addEventListener("click", function () {
+buttontralelouloup.addEventListener("click", function () {
   clicker.payer(1000);
   afficheNB.innerHTML = clicker.getCompteur();
 });
-loup67.addEventListener("click", function () {
+buttonloup67.addEventListener("click", function () {
   clicker.payer(6767);
   afficheNB.innerHTML = clicker.getCompteur();
 });
