@@ -206,7 +206,11 @@ h2 {
   font-size: 1.5rem;
 }
 
-.shop-item {
+.shop-loup,
+.shop-alpha,
+.shop-loupia,
+.shop-tralelouloup,
+.shop-loup67 {
   background-color: rgba(255, 255, 255, 0.05);
   margin-bottom: 12px;
   padding: 15px;
@@ -219,27 +223,39 @@ h2 {
   border: 1px solid transparent;
 }
 
-.shop-item:hover {
+.shop-loup:hover,
+.shop-alpha:hover,
+.shop-loupia:hover,
+.shop-tralelouloup:hover,
+.shop-loup67:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateX(5px);
 }
 
-.shop-item.disabled {
+.shop-loup.disabled,
+.shop-alpha.disabled,
+.shop-loupia.disabled,
+.shop-tralelouloup.disabled,
+.shop-loup67.disabled {
   opacity: 0.5;
   cursor: not-allowed;
   filter: grayscale(100%);
 }
 
-.shop-item.purchased {
+.shop-loup.purchased,
+.shop-alpha.purchased,
+.shop-loupia.purchased,
+.shop-tralelouloup.purchased,
+.shop-loup67.purchased {
   opacity: 0.5;
   cursor: not-allowed;
   background-color: green;
 }
-.shop-item.disabled:hover {
+/* .shop-item.disabled:hover {
   transform: none;
   border-color: transparent;
-}
+} */
 
 .shop-info {
   display: flex;
