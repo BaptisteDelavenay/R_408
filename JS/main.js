@@ -72,26 +72,38 @@ button.addEventListener("click", function () {
   }
 });
 
-// --- EFFET VISUEL : PLUIE DE VIANDE ---
-// C'est cette fonction qui fait apparaître le steak
+// PARTIE 1 : La fonction qui fabrique le steak
 function spawnMeatParticle(x, y) {
-  // 1. Créer l'élément
-  const meat = document.createElement("div");
-  meat.classList.add("meat-particle"); // Classe définie dans le CSS
-  meat.textContent = "🥩";
+    const meat = document.createElement('div');
+    meat.classList.add('meat-particle'); // Utilise le style CSS
+    meat.textContent = '🥩'; 
+    
+    // Ajoute un petit décalage aléatoire pour que ça fasse naturel
+    const randomX = (Math.random() - 0.5) * 50;
+    const randomY = (Math.random() - 0.5) * 50;
 
-  // 2. Position aléatoire autour du clic pour un effet naturel
-  const randomX = (Math.random() - 0.5) * 50; // Décalage horizontal
-  const randomY = (Math.random() - 0.5) * 50; // Décalage vertical
+    // Place le steak là où on a cliqué (x et y)
+    meat.style.left = `${x + randomX}px`;
+    meat.style.top = `${y + randomY}px`;
 
-  meat.style.left = `${x + randomX}px`;
-  meat.style.top = `${y + randomY}px`;
+    document.body.appendChild(meat);
 
-  // 3. Ajouter au corps de la page
-  document.body.appendChild(meat);
-
-  // 4. Supprimer après l'animation (0.8 seconde)
-  setTimeout(() => {
-    meat.remove();
-  }, 800);
+    // Supprime le steak après 0.8 seconde pour ne pas faire laguer le jeu
+    setTimeout(() => {
+        meat.remove();
+    }, 800);
 }
+
+
+// PARTIE 2 : L'écouteur qui déclenche la fonction au clic
+const button = document.getElementById('button');
+
+button.addEventListener('click', function(event) {
+    // --- Ton code de score habituel ---
+    // score++;
+    // updateDisplay();
+    // ----------------------------------
+
+    // LA LIGNE MAGIQUE : On appelle la fonction avec les coordonnées de la souris
+    spawnMeatParticle(event.clientX, event.clientY);
+});
