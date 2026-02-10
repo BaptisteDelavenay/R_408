@@ -61,8 +61,14 @@ button.addEventListener("click", function () {
   afficheNB.innerHTML = clicker.getCompteur();
   if (afficheNB.innerHTML == 10) {
     temp[0].style.opacity = "1";
-  } else if (afficheNB.innerHTML == 20) {
+  } else if (afficheNB.innerHTML == 200) {
     temp[1].style.opacity = "1";
+  } else if (afficheNB.innerHTML == 500) {
+    temp[2].style.opacity = "1";
+  } else if (afficheNB.innerHTML == 1000) {
+    temp[3].style.opacity = "1";
+  } else if (afficheNB.innerHTML == 6767) {
+    temp[4].style.opacity = "1";
   }
 });
 
