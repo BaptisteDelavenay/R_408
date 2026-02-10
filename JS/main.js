@@ -4,7 +4,7 @@ let afficheNB = document.getElementById("compteur");
 let temp = document.getElementsByClassName("shop-item disabled");
 
 // toutes les div des améliorations
-let shopLoup = document.getElementsByClassName("shop-loup");
+let shopLoup = document.getElementsByClassName("shop-loup")[0];
 let shopAlpha = document.getElementsByClassName("shop-alpha");
 let shopLoupia = document.getElementsByClassName("shop-loupia");
 let shopTralelouloup = document.getElementsByClassName("shop-tralelouloup");
@@ -39,9 +39,10 @@ class Clicker {
   payer(val) {
     if (this.compteur < val) {
       alert("Pas assez de viande ! Il vous en faut " + val + " pour recruter");
+      return false;
     } else {
       this.compteur -= val;
-      return this.compteur;
+      return true;
     }
   }
 }
@@ -52,6 +53,8 @@ buttonloup.addEventListener("click", function () {
   if (clicker.payer(10)) {
     clicker.setPuissance(2);
     afficheNB.innerHTML = clicker.getCompteur();
+    shopLoup.classList.add("purchased");
+    buttonloup.disabled = true;
   }
 });
 buttonalpha.addEventListener("click", function () {
@@ -80,6 +83,6 @@ buttonloup67.addEventListener("click", function () {
 });
 
 button.addEventListener("click", function () {
-  clicker.incrementer(1);
+  clicker.incrementer();
   afficheNB.innerHTML = clicker.getCompteur();
 });
