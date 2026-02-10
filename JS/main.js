@@ -66,6 +66,10 @@ button.addEventListener("click", function(){
     else if (afficheNB.innerHTML == 20){
       temp[1].style.opacity = "1";
   }
+
+  else if (afficheNB.innerHTML == 30){
+      temp[2].style.opacity = "1";
+  }
     }
 )
 
