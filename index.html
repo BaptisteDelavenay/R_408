@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aouu Clicker - Le Réveil de la Meute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Aouu Clicker 🌕</h1>
+        <h2>Fondez votre meute légendaire</h2>
+    </header>
+
+    <main class="game-container">
+        <section class="click-zone">
+            <div class="score-container">
+                <span id="compteur">0</span>
+                <span class="currency-label">🥩 Morceaux de viande</span>
+            </div>
+            
+            <button id="button" class="wolf-button">
+                <div class="wolf-icon">🐺</div>
+                <span>CHASSER</span>
+            </button>
+        </section>
+
+        <aside class="shop-zone">
+    <h3>Renforcer la Meute</h3>
+    
+    <div class="shop-item disabled" id="item-0">
+        <div class="shop-info">
+            <span class="item-name">Loup Solitaire</span>
+            <span class="item-cost">Coût: <span id="prix-0">10</span> 🥩</span>
+            <span class="item-bonus">+1 viande/sec</span>
+            <button id="loup">ACHETER</button>
+        </div>
+        <div class="item-count" id="loup-count">0</div>
+    </div>
+
+    <div class="shop-item disabled" id="item-1">
+        <div class="shop-info">
+            <span class="item-name">Alpha</span>
+            <span class="item-cost">Coût: <span id="prix-1">200</span> 🥩</span>
+            <span class="item-bonus">+2 viande/sec</span>
+            <button id="alpha">ACHETER</button>
+        </div>
+        <div class="item-count" id="alpha-count">0</div>
+    </div>
+
+    <div class="shop-item disabled" id="item-2">
+        <div class="shop-info">
+            <span class="item-name">Loup IA 🤖</span>
+            <span class="item-cost">Coût: <span id="prix-2">500</span> 🥩</span>
+            <span class="item-bonus">+4 viande/sec</span>
+            <button id="loupia">ACHETER</button>
+        </div>
+        <div class="item-count" id="loupia-count">0</div>
+    </div>
+
+    <div class="shop-item disabled" id="item-3">
+        <div class="shop-info">
+            <span class="item-name">Traleloulou 🎶</span>
+            <span class="item-cost">Coût: <span id="prix-3">1000</span> 🥩</span>
+            <span class="item-bonus">+8 viande/sec</span>
+            <button id="traleloulou">ACHETER</button>
+        </div>
+        <div class="item-count" id="traleloulou-count">0</div>
+    </div>
+
+    <div class="shop-item disabled" id="item-4">
+        <div class="shop-info">
+            <span class="item-name">Loup 67 🏰</span>
+            <span class="item-cost">Coût: <span id="prix-4">6767</span> 🥩</span>
+            <span class="item-bonus">+16 viande/sec</span>
+            <button id="loup67">ACHETER</button>
+        </div>
+        <div class="item-count" id="loup67-count">0</div>
+    </div>
+</aside>
+    
+    <script src="JS/main.js"></script>
+</body>
+</html>
