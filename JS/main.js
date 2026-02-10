@@ -37,7 +37,7 @@ let loup = document.getElementById("loup");
 let loupcompteur = document.getElementById("loup-count");
 let alpha = document.getElementById("alpha");
 let loupia = document.getElementById("loupia");
-let tralelouloup = document.getElementById("traleloulou");
+let tralelouloup = document.getElementById("tralelouloup");
 let loup67 = document.getElementById("loup67");
 
 
