@@ -29,7 +29,7 @@ class Clicker {
 
   payer(val) {
     if (this.compteur < val) {
-      alert("Pas assez de viande !");
+      alert("Pas assez de viande ! Il vous en faut " + val + " pour recruter");
     } else {
       this.compteur -= val;
       return this.compteur;
