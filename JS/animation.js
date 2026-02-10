@@ -32,3 +32,12 @@ button.addEventListener("click", function (event) {
   // LA LIGNE MAGIQUE : On appelle la fonction avec les coordonnées de la souris
   spawnMeatParticle(event.clientX, event.clientY);
 });
+
+// 4. JOUER LE SON DU LOUP
+// On remet le curseur audio à 0 pour pouvoir spammer le clic
+audioLoup.currentTime = 0;
+// On lance la lecture (si le navigateur l'autorise)
+audioLoup.play().catch((error) => {
+  // Certains navigateurs bloquent le son tant qu'on n'a pas interagi avec la page
+  console.log("Lecture bloquée :", error);
+});
