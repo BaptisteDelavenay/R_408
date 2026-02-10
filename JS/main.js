@@ -86,7 +86,7 @@ function spawnMeatParticle(x, y) {
 
 
 // PARTIE 2 : L'écouteur qui déclenche la fonction au clic
-const button = document.getElementById('button');
+const boutton = document.getElementById('button');
 
 button.addEventListener('click', function(event) {
     // --- Ton code de score habituel ---
