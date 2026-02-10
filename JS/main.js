@@ -55,15 +55,6 @@ loup67.addEventListener("click", function () {
   Clicker.payer(6767);
 });
 
-button.addEventListener("click", function () {
-  clicker.incrementer(1);
-  afficheNB.innerHTML = clicker.getCompteur();
-});
-button.addEventListener("click", function () {
-  clicker.incrementer(1);
-  afficheNB.innerHTML = clicker.getCompteur();
-});
-
 // --- EFFET VISUEL : PLUIE DE VIANDE ---
 // C'est cette fonction qui fait apparaître le steak
 function spawnMeatParticle(x, y) {
